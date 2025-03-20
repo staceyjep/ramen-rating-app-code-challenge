@@ -41,16 +41,17 @@ const ramens = [
   },
 ];
 
-const ramenMenu = document.getElementById("menu");
+let ramenMenu = document.getElementById("menu");
 
-const ramenDetails = document.getElementById("details");
+let ramenDetails = document.getElementById("details");
 
-const ramenForm = document.getElementById("ratingform");
+let ramenForm = document.getElementById("ratingform");
 
 function displayRamens() {
+  let ramenMenu = document.getElementById("menu");
   menu.innerHTML = "";
 
-  for (var i = 0; i < ramens.length; i++) {
+  for (let i = 0; i < ramens.length; i++) {
     const ramen = ramens[i];
 
     const img = document.createElement("img");
@@ -70,6 +71,7 @@ function displayRamens() {
 }
 
 function handleClick(ramen) {
+  let ramenDetails = document.getElementById("details");
   document.getElementById("detail-image").src =
     ramen.image || "images/placeholder.jpg";
 
